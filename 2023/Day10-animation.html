@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Path Creation</title>
+</head>
+<body style="margin: 0; overflow: hidden;">
+    <canvas id="myCanvas" style="display: block;"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // Set canvas size to full window size
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Array representing the path
+        var pathCoordinates = [
+            [1,1],[1,2],[1,3],[1,4],[1,5],[1,6],[1,7],[2,7],[3,7],[4,7],
+            [4,6],[4,5],[3,5],[2,5],[2,4],[2,3],[2,2],[3,2],[4,2],[5,2],
+            [6,2],[7,2],[8,2],[8,3],[8,4],[8,5],[7,5],[6,5],[6,6],[6,7],
+            [7,7],[8,7],[9,7],[9,6],[9,5],[9,4],[9,3],[9,2],[9,1],[8,1],
+            [7,1],[6,1],[5,1],[4,1],[3,1],[2,1]
+        ];
+
+        // Draw the path
+        var currentPoint = 0;
+        drawNextPoint();
+
+        function drawNextPoint() {
+            if (currentPoint < pathCoordinates.length) {
+                ctx.beginPath();
+                ctx.arc(pathCoordinates[currentPoint][0] * 10, pathCoordinates[currentPoint][1] * 10, 2, 0, 2 * Math.PI);
+                ctx.stroke();
+                currentPoint++;
+                requestAnimationFrame(drawNextPoint);
+            }
+        }
+    </script>
+</body>
+</html>

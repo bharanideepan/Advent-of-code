@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Print and Save PDF</title>
+    <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+</head>
+<body>
+
+    <h1>Your Content Here</h1>
+    <p>This is some text that you want to print.</p>
+
+    <script>
+        function printAndSavePDF() {
+            // Use html2pdf.js to generate PDF
+            html2pdf(document.body, {
+                margin: 10,
+                filename: 'output.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            }).then(function (pdf) {
+                // Trigger the browser's print functionality
+                pdf.autoPrint();
+                pdf.output('dataurlnewwindow');
+            });
+        }
+    </script>
+
+    <button onclick="printAndSavePDF()">Print and Save PDF</button>
+
+</body>
+</html>
