@@ -1,0 +1,10 @@
+Day1: Simple array manipulation
+Day2: Simple array manipulation
+Day3: Regex
+Day4: Simple 2D array manipulation
+Day5: Kahn's Algorithm / Brute force
+Day6: Brute force
+Day7: Combinations - Brute force
+Day8: Brute force
+Day9: Brute force
+Day10: BFS/DFS
