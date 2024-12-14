@@ -11,7 +11,6 @@ const countPossibilities = (x, y) => {
         [-1, 0],
     ];
     const visitedTop = new Set();
-
     const bfs = (startRow, startCol) => {
         const queue = [[startRow, startCol]];
         const visited = new Set();
