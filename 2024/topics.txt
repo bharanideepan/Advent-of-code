@@ -3,8 +3,13 @@ Day2: Simple array manipulation
 Day3: Regex
 Day4: Simple 2D array manipulation
 Day5: Kahn's Algorithm / Brute force
-Day6: Brute force
+Day6: Simple 2D array manipulation
 Day7: Combinations - Brute force
-Day8: Brute force
-Day9: Brute force
+Day8: Simple 2D array manipulation
+Day9: Simple array manipulation
 Day10: BFS/DFS
+Day11: Brute force / memoization
+Day12: Modified BFS/DFS
+Day13: Linear algebra
+Day14: Simple 2D array manipulation
+Day15: Simple 2D array manipulation
