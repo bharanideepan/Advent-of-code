@@ -13,3 +13,11 @@ Day12: Modified BFS/DFS
 Day13: Linear algebra
 Day14: Simple 2D array manipulation
 Day15: Simple 2D array manipulation
+Day16: Dijkstra and DFS
+Day17: Reverse Engineering / Mathematical operations - Nithin guided
+Day18: Dijkstra
+Day19: Dynamic programming - Nithin guided
+Day20: Dijkstra + Brute force for part1
+Day21:
+Day22: Brute force
+Day23: Brute force / bronKerbosch
