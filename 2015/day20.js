@@ -1,20 +1,20 @@
 let target = 29000000;
-let houseNumber = 1;
-outer: while (true) {
-    let temp = 0;
-    for (let i = 1; i <= houseNumber; i++) {
-        if (houseNumber % i == 0) {
-            temp += i * 10
+let index = 665000;
+while (true) {
+    function findDivisors(number) {
+        const divisors = [];
+        for (let i = 1; i <= number; i++) {
+            if (number % i === 0) {
+                divisors.push(i);
+            }
         }
-        if (temp == target) {
-            console.log(houseNumber, 1);
-            break outer;
-        }
-        if (temp > target) {
-            console.log(houseNumber, temp)
-            console.log(houseNumber, 2);
-            break;
-        }
+        return divisors;
     }
-    houseNumber++;
+    const presents = findDivisors(index).map(e => e * 10).reduce((a, v) => a + v)
+    console.log(index, presents);
+    if (presents >= target) {
+        console.log(index);
+        break;
+    }
+    index++
 }
