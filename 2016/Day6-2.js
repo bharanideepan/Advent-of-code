@@ -10,15 +10,15 @@ input.map((line) => {
     })
 })
 Object.keys(obj).map((val) => {
-    let max = 0;
+    let min = 0;
     Object.keys(obj[val]).map((char, index) => {
-        if (obj[val][char] > max) max = obj[val][char];
-        if (max == obj[val][char]) {
-            obj[val].max = char
+        if (min == 0 || obj[val][char] < min) min = obj[val][char];
+        if (min == obj[val][char]) {
+            obj[val].min = char
         }
     })
 })
 console.log(Object.values(obj).reduce((acc, val) => {
-    acc += val.max;
+    acc += val.min;
     return acc;
 }, ''))
